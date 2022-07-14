@@ -1,0 +1,40 @@
+{
+  "name": "@smogon/calc",
+  "version": "0.5.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/production.min.js",
+  "description": "Pokémon battle calculator",
+  "repository": "github:smogon/damage-calc",
+  "contributors": [
+    "Austin Couturier <austincouturier@icloud.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^17.0.0"
+  },
+  "devDependencies": {
+    "@pkmn/dex": "^0.5.1",
+    "@pkmn/eslint-config": "^2.1.0",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/parser": "^5.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-plugin-jest": "^25.3.0",
+    "jest": "^27.4.5",
+    "ts-jest": "^27.1.1",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "lint": "eslint --cache src --ext ts",
+    "fix": "eslint --fix src --ext ts",
+    "compile": "tsc -p .",
+    "bundle": "node bundle",
+    "build": "npm run compile && npm run bundle",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "posttest": "npm run lint"
+  }
+}
