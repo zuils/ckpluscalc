@@ -215,7 +215,7 @@ const GSC_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   Bide: {type: 'Normal'},
   Counter: {bp: 0},
   Crabhammer: {bp: 120},
-  Dig: {bp: 60},
+  Dig: {bp: 80},
   'Double-Edge': {bp: 120},
   Explosion: {bp: 250},
   Gust: {type: 'Flying'},
